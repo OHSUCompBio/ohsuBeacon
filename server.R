@@ -23,7 +23,12 @@ shinyServer(
       request <- paste0("http://localhost/cgi-bin/ucscBeacon/query?chromosome=",chrom(),"&position=",pos(),"&alternateBases=",a())
       r <- GET(request)
       response <- fromJSON(content(r, as = "text"))
-      paste0(response$response$exists)
+      exists <- response$response$exists
+      if (exists){
+        paste0('Yes')
+      }else{
+        paste0('No')
+      }
     })
   }
 )
