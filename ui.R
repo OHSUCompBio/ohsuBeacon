@@ -33,8 +33,8 @@ shinyUI(fluidPage(
 
   tags$div(
     id = "image",
-    a(hr(p('Learn more about Beacons at:',
+    hr(p('Learn more about Beacons at:',
       a('http://ga4gh.org/#/beacon')),
-    p(em('* Research with this data may have regulatory requirements; please check with research administrators at your institution.'))))
+    p(em('* Research with this data may have regulatory requirements; please check with research administrators at your institution.')))
   )
 ))
